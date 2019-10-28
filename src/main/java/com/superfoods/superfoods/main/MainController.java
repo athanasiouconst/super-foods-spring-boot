@@ -1,5 +1,6 @@
 package com.superfoods.superfoods.main;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,9 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 //MainController
 @RestController
+//@CrossOrigin(origins = "https://nutrear.co-athanasiou.gr")
 @CrossOrigin(origins = "http://localhost:3000")
+@ComponentScan(basePackages = {"com.superfoods.superfoods.main"})
 public class MainController {
 
+
+    @GetMapping( path="/")
+    public String home() {
+
+        return "Home Page";
+    }
 
     //GET
     //URI
