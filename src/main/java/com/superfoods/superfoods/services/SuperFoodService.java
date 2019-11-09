@@ -12,7 +12,7 @@ public class SuperFoodService {
 
     private static List<SuperFood> superFoodList = new ArrayList<>();
 
-    private static int idCounter = 0;
+    private static long idCounter = 0;
 
     static {
         superFoodList.add(new SuperFood(++idCounter, "costas", "Superfoods Omegadvance", new Date(), false));

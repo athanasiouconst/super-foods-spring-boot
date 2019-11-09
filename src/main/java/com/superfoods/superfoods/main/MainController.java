@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 //MainController
 @RestController
-//@CrossOrigin(origins = "https://nutrear.co-athanasiou.gr")
 @CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins="https://nutrear.co-athanasiou.gr")
 @ComponentScan(basePackages = {"com.superfoods.superfoods.main"})
 public class MainController {
 

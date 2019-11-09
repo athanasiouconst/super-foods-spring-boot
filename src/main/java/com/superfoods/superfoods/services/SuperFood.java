@@ -1,9 +1,11 @@
 package com.superfoods.superfoods.services;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import java.util.Date;
 import javax.persistence.Id;
 
+@Entity
 public class SuperFood {
 
     @Id
@@ -20,7 +22,7 @@ public class SuperFood {
 
     }
 
-    public SuperFood(long id, String username, String description, Date targetDate, boolean isDone) {
+    public SuperFood(Long id, String username, String description, Date targetDate, boolean isDone) {
         super();
         this.id = id;
         this.username = username;
@@ -29,11 +31,11 @@ public class SuperFood {
         this.isDone = isDone;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
