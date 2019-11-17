@@ -19,15 +19,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @CrossOrigin(origins="http://localhost:3000")
-//@CrossOrigin(origins="https://nutrear.co-athanasiou.gr")
+//@CrossOrigin(origins="https://e-cantina.co-athanasiou.gr")
 public class SuperFoodJpaResource {
 	
 
 	@Autowired
 	private SuperFoodJpaRepository superFoodJpaRepository;
 
-	
-	@GetMapping("/jpa/{username}/superFoods")
+
+	@GetMapping(path="/jpa/{username}/superFoods")
 	public List<SuperFood> getAllSuperFood(@PathVariable String username){
 		return superFoodJpaRepository.findByUsername(username);
 

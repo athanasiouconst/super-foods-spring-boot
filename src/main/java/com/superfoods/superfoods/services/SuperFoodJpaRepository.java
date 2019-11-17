@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SuperFoodJpaRepository extends JpaRepository<SuperFood, Long>{
+
 	List<SuperFood> findByUsername(String username);
+
 }

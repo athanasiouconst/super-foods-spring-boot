@@ -16,6 +16,13 @@ public class SuperFood {
     private Date targetDate;
     private boolean isDone;
 
+    public SuperFood(String username, String description, Date targetDate, boolean isDone) {
+        this.username = username;
+        this.description = description;
+        this.targetDate = targetDate;
+        this.isDone = isDone;
+    }
+
     public SuperFood(long id) {
         super();
         this.id = id;

@@ -11,9 +11,8 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins="https://nutrear.co-athanasiou.gr")
-@ComponentScan(basePackages = {"com.superfoods.superfoods.main"})
+@CrossOrigin(origins="http://localhost:3000")
+//@CrossOrigin(origins="https://e-cantina.co-athanasiou.gr")
 public class SuperFoodResource {
 
 
