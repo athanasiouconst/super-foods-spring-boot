@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 //MainController
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
-//@CrossOrigin(origins="https://e-cantina.co-athanasiou.gr")
+@CrossOrigin(origins="http://localhost:3001")
+//@CrossOrigin(origins="https://e-cantina-demo.co-athanasiou.gr")
+
 public class MainController {
 
 
-    @GetMapping( path="/")
+    @GetMapping( path="/{username}/")
     public String home() {
 
         return "Home Page";
@@ -23,19 +24,19 @@ public class MainController {
     //method - "Main Controller"
 
 //    @RequestMapping(method = RequestMethod.GET, path="/main")
-    @GetMapping( path="/jpa/main")
+    @GetMapping( path="/{username}/main")
     public String main() {
 
         return "Main Controller";
     }
 
-    @GetMapping(path = "/jpa/main-bean")
+    @GetMapping(path = "{username}//main-bean")
     public MainBean mainBean() {
         return new MainBean("Main Bean");
     }
 
     ///main/path-variable/costas
-    @GetMapping(path = "/jpa/main/path-variable/{name}")
+    @GetMapping(path = "/{username}/main/path-variable/{name}")
     public MainBean mainPathVariable(@PathVariable String name) {
         //throw new RuntimeException("Something went wrong");
         return new MainBean(String.format("Main Bean, %s", name));

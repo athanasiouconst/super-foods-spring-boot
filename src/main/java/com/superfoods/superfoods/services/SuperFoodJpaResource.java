@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-@CrossOrigin(origins="http://localhost:3000")
-//@CrossOrigin(origins="https://e-cantina.co-athanasiou.gr")
+@CrossOrigin(origins="http://localhost:3001")
+//@CrossOrigin(origins="https://e-cantina-demo.co-athanasiou.gr")
+
 public class SuperFoodJpaResource {
 	
 
